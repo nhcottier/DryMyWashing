@@ -4,94 +4,91 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dry My Washing</title>
-  <meta name="description" content="Dry My Washing turns the weather forecast into a simple laundry decision.">
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #f7f4ed;
-      --card: rgba(255,255,255,0.84);
-      --text: #18202b;
-      --muted: #5f6772;
-      --accent: #9b6b2f;
-      --line: rgba(155,107,47,0.14);
-      --blue: #1f5dbb;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: ui-rounded, "SF Pro Rounded", "Avenir Next", system-ui, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 82% 12%, rgba(247,209,95,0.34), transparent 28%),
-        radial-gradient(circle at 12% 88%, rgba(147,222,255,0.28), transparent 24%),
-        linear-gradient(180deg, #eef5fa 0%, var(--bg) 100%);
-      min-height: 100vh;
-    }
-    main { max-width: 1120px; margin: 0 auto; padding: 40px 20px 72px; }
-    .hero, .support {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      box-shadow: 0 22px 54px rgba(31, 42, 57, 0.08);
-      backdrop-filter: blur(14px);
-    }
-    .hero { padding: 34px 32px 28px; }
-    .eyebrow { margin: 0 0 18px; font-size: 0.9rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 800; }
-    h1 { margin: 0; font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 0.96; letter-spacing: -0.045em; }
-    .lead { margin: 18px 0 10px; font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--muted); max-width: 720px; line-height: 1.55; }
-    .problem { margin: 0; font-size: 1.03rem; color: var(--muted); max-width: 720px; line-height: 1.6; }
-    .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px; }
-    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 20px; border-radius: 16px; font-weight: 700; text-decoration: none; transition: transform .14s ease, box-shadow .14s ease; }
-    .button.primary { background: var(--accent); color: white; box-shadow: 0 16px 30px rgba(155,107,47,0.22); }
-    .button.secondary { background: white; color: var(--blue); border: 1px solid rgba(31,93,187,0.12); }
-    .shots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
-    .shot { background: rgba(255,255,255,0.7); border: 1px solid var(--line); border-radius: 22px; padding: 16px; }
-    .shot img { width: 100%; border-radius: 18px; display: block; box-shadow: 0 10px 24px rgba(24,32,43,0.12); }
-    .shot h2 { margin: 14px 0 4px; font-size: 1.05rem; }
-    .shot p { margin: 0; color: var(--muted); line-height: 1.55; font-size: 0.98rem; }
-    .support { margin-top: 26px; padding: 28px 32px; }
-    .support-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 18px; }
-    .support h3 { margin: 0 0 10px; font-size: 1.12rem; }
-    .support p, .support li { color: var(--muted); line-height: 1.65; }
-    .support ul { margin: 10px 0 0; padding-left: 18px; }
-    a { color: var(--blue); text-decoration: none; }
-    .footer { margin-top: 18px; font-size: 0.95rem; color: var(--muted); }
-    @media (max-width: 860px) { .shots, .support-grid { grid-template-columns: 1fr; } .hero, .support { padding-left: 20px; padding-right: 20px; } }
-  </style>
+  <meta
+    name="description"
+    content="Dry My Washing turns the weather forecast into a simple laundry decision: hang it out now, bring it in before rain, or finish in the dryer."
+  >
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <main>
-    <section class="hero">
+  <main class="page-shell">
+    <section class="hero-panel">
       <p class="eyebrow">Dry My Washing</p>
       <h1>Know when to hang it out.</h1>
-      <p class="lead">Dry My Washing turns the weather forecast into a simple laundry decision: hang it out now, bring it in before rain, or expect to finish in the dryer.</p>
-      <p class="problem">Instead of scanning a full forecast, you get a clear drying window, next-rain timing, and a practical answer for the day in seconds.</p>
-      <div class="actions">
-        <a class="button primary" href="https://apps.apple.com/nz/app/dry-my-washing/id6762948256?uo=4">Download on the App Store</a>
-        <a class="button secondary" href="mailto:nick@hyspecs.co.nz">Contact support</a>
+      <p class="lead">
+        Dry My Washing turns the weather forecast into a simple laundry decision:
+        hang it out now, bring it in before rain, or expect to finish in the dryer.
+      </p>
+      <p class="sublead">
+        Instead of scanning a full forecast, you get a clear drying window, next-rain timing,
+        and a practical answer for the day in seconds.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://apps.apple.com/nz/app/dry-my-washing/id6762948256?uo=4">Download on the App Store</a>
+        <a class="button button-secondary" href="mailto:nick@hyspecs.co.nz">Contact support</a>
       </div>
-      <section class="shots" aria-label="App screenshots">
-        <article class="shot"><img src="data:image/jpeg;base64,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" alt="Yes, today looks good"><h2>Yes, today looks good</h2><p>See the best drying window at a glance.</p></article>
-        <article class="shot"><img src="data:image/jpeg;base64,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QAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFB//9k=" alt="You'll need the dryer"><h2>You'll need the dryer</h2><p>Know when the outside window is too short.</p></article>
-        <article class="shot"><img src="data:image/jpeg;base64,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QAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFB//9k=" alt="Bring it in before rain"><h2>Bring it in before rain</h2><p>Get a simple time to bring the washing in.</p></article>
-      </section>
     </section>
-    <section class="support">
-      <div class="support-grid">
-        <div>
-          <h3>Support</h3>
-          <p>If you need help with Dry My Washing, want to report a bug, or have a suggestion for a future update, get in touch at <a href="mailto:nick@hyspecs.co.nz">nick@hyspecs.co.nz</a>.</p>
-          <p>Helpful details include your device model, iOS version, location or nearest town, what the app showed, and what you expected instead.</p>
+
+    <section class="feature-grid" aria-label="App screenshots">
+      <article class="feature-card">
+        <div class="feature-image-wrap">
+          <img src="./assets/hero.png" alt="Dry My Washing showing a good drying window">
         </div>
-        <div>
-          <h3>Links</h3>
-          <ul>
-            <li><a href="./privacy.html">Privacy Policy</a></li>
-            <li><a href="https://apps.apple.com/nz/app/dry-my-washing/id6762948256?uo=4">App Store</a></li>
-          </ul>
+        <div class="feature-copy">
+          <h2>Yes, today looks good</h2>
+          <p>See the best drying window at a glance.</p>
         </div>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-image-wrap">
+          <img src="./assets/dryer.png" alt="Dry My Washing showing that you'll need the dryer">
+        </div>
+        <div class="feature-copy">
+          <h2>You&rsquo;ll need the dryer</h2>
+          <p>Know when the outside window is too short.</p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-image-wrap">
+          <img src="./assets/rain.png" alt="Dry My Washing showing rain arriving soon and advising to keep the washing indoors">
+        </div>
+        <div class="feature-copy">
+          <h2>Rain is coming soon</h2>
+          <p>Spot incoming showers before you hang anything out.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="info-panel">
+      <div class="info-block">
+        <h3>Support</h3>
+        <p>
+          If you need help with Dry My Washing, want to report a bug, or have a suggestion for
+          a future update, get in touch at
+          <a href="mailto:nick@hyspecs.co.nz">nick@hyspecs.co.nz</a>.
+        </p>
       </div>
-      <p class="footer">Dry My Washing is published by Nick Cottier.</p>
+
+      <div class="info-block">
+        <h3>What to include</h3>
+        <ul>
+          <li>Your device model and iOS version</li>
+          <li>Your location or nearest town</li>
+          <li>What the app showed and what you expected instead</li>
+          <li>A screenshot if you have one</li>
+        </ul>
+      </div>
+
+      <div class="info-block">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="./privacy.html">Privacy Policy</a></li>
+          <li><a href="https://apps.apple.com/nz/app/dry-my-washing/id6762948256?uo=4">App Store</a></li>
+        </ul>
+      </div>
     </section>
   </main>
 </body>
